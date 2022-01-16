@@ -123,9 +123,15 @@ TC 是一款回合制策略游戏 (Turn-Based Strategy,TBS)。TBS 是策略游�
 
 #### Story 故事
 
+不要啦，灵感被榨干啦！
+
 #### Entity 实体
 
 #### Character 角色
+
+- 操纵角色
+- 中立角色
+- 敌对角色
 
 ### Gallery 艺术画廊
 
