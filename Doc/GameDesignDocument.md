@@ -75,7 +75,7 @@ TC 是一款回合制策略游戏 (Turn-Based Strategy,TBS)。TBS 是策略游�
   击杀某些敌对目标后获得。
   - 其他神奇的 painted eggshell。
 
-具体包括如下操作：
+每回合玩家都可以花费行动点操纵一支子根进行如下操作：
 
 - 探索
   - 向下伸展  
@@ -127,7 +127,7 @@ TC 是一款回合制策略游戏 (Turn-Based Strategy,TBS)。TBS 是策略游�
 
 #### Entity 实体
 
-#### Character 角色
+##### Character 角色
 
 - 操纵角色
 - 中立角色
