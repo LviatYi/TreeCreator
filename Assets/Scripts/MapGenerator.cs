@@ -23,6 +23,7 @@ public class MapGenerator : MonoBehaviour {
     [SerializeField]
     private Tile kaTile;
 
+    [Header("Seed")]
     [SerializeField]
     private float nSeed;
     [SerializeField]
@@ -32,13 +33,10 @@ public class MapGenerator : MonoBehaviour {
     [SerializeField]
     private float waterSeed;
 
-    [SerializeField]
+
     private float nTileProbability;
-    [SerializeField]
     private float pTileProbability;
-    [SerializeField]
     private float kaTileProbability;
-    [SerializeField]
     private float waterTileProbability;
 
     //public float NSeed {
@@ -126,13 +124,13 @@ public class MapGenerator : MonoBehaviour {
         }
 
 
-        if (NoiseKit.PerlinNoise(vec.x, vec.y, kaSeed) >= kaTileProbability) {
+        if (NoiseKit.PerlinNoise(vec.x, vec.y, kaSeed, 100, 3) >= kaTileProbability) {
             tile = kaTile;
         }
-        if (NoiseKit.PerlinNoise(vec.x, vec.y, pSeed) >= pTileProbability) {
+        if (NoiseKit.PerlinNoise(vec.x, vec.y, pSeed, 100, 3) >= pTileProbability) {
             tile = pTile;
         }
-        if (NoiseKit.PerlinNoise(vec.x, vec.y, nSeed) >= nTileProbability) {
+        if (NoiseKit.PerlinNoise(vec.x, vec.y, nSeed, 100, 3) >= nTileProbability) {
             tile = nTile;
         }
 
@@ -148,7 +146,7 @@ public class MapGenerator : MonoBehaviour {
     Tile WaterTileGenerate(Vector2 vec) {
         Tile tile = null;
 
-        if (NoiseKit.PerlinNoise(vec.x, vec.y, waterSeed, 15) >= waterTileProbability) {
+        if (NoiseKit.PerlinNoise(vec.x, vec.y, waterSeed, 100, 15) >= waterTileProbability) {
             tile = waterTile;
         }
 
