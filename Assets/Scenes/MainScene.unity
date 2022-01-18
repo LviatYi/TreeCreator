@@ -682,11 +682,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
-  dirtTile: {fileID: 11400000, guid: 52cb296aec7cb294eb1ebe1a9940b1cb, type: 2}
-  waterTile: {fileID: 11400000, guid: 9beb621f66441304291c8740a54b7beb, type: 2}
-  pTile: {fileID: 11400000, guid: 483e99a6596193d48b4dbb231bbd6931, type: 2}
-  nTile: {fileID: 11400000, guid: b57bfc47f8ef21e4a8bb7ba2161623fc, type: 2}
-  kaTile: {fileID: 11400000, guid: f8d4e4e62a3bc8441874f8d6c9a16eb1, type: 2}
+  dirtTile: {fileID: 11400000, guid: 9f30870548727a34f95f63355c9291da, type: 2}
+  waterTile: {fileID: 11400000, guid: 37e158adfff98f947a0d9dd5b77e8922, type: 2}
+  pTile: {fileID: 11400000, guid: 2edf31479b28f2c4eb25eeceb3cb7d25, type: 2}
+  nTile: {fileID: 11400000, guid: 64334c588c0b84942b43dfde95b6ac09, type: 2}
+  kaTile: {fileID: 11400000, guid: 7c77baf9b33ed8041b6fb916b1b1f644, type: 2}
   nSeed: 0
   pSeed: 0
   kaSeed: 0
@@ -1358,6 +1358,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxFOV: 85
   MinFOV: 20
+  MaxOffSetX: 40
+  MaxOffSetY: 40
+  MaxReturnTime: 1.5
   FOVChangeSpeed: 5
   PanSpeed: 20
   KeyBoardInputE: {fileID: 797367920517893025, guid: 9d431cc137e97774cb64feaa4d7fa7f2, type: 3}
@@ -1498,7 +1501,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967392887}
   m_Enabled: 1
-  m_CellSize: {x: 0.99, y: 0.99, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
