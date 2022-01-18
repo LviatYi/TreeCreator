@@ -1,0 +1,54 @@
+{
+    "name": "KeyboardControl",
+    "maps": [
+        {
+            "name": "SwitchFollow",
+            "id": "54808ef5-6e68-4eef-9112-cb791fe6f7f6",
+            "actions": [
+                {
+                    "name": "Last",
+                    "type": "Button",
+                    "id": "64d33008-6956-4730-87ec-81b4f9aea1fd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "31cb9cf2-62f8-4634-a23a-9e8a4ae9c346",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62a6d589-eee4-4e69-a032-17d45196b234",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Last",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f5a0512-c247-468f-998d-ee1e3fe8b7bd",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
