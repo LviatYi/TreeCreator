@@ -73,6 +73,9 @@ public class MapGenerator : MonoBehaviour {
     //}
 
     void Start() {
+        GameObject obj = GameObject.Find("UndergroundTilemap");
+        map = obj.GetComponent<Tilemap>();
+
         //以下数据建议从配置文件中获取
         this.nSeed = 100.1F;
         this.pSeed = 151.15F;
