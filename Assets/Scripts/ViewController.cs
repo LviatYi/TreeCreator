@@ -9,9 +9,8 @@ public class ViewController : MonoBehaviour {
     [SerializeField]
     private Tilemap map;
 
-
     void Start() {
-
+        this.map = GameObject.Find("UndergroundTilemap").GetComponent<Tilemap>();
     }
 
     void Update() {

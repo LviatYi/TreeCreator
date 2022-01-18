@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: fb488a401ad082c42ae2d0b85db834a3
+guid: 7ecfd5c59857d6f428af54b76544ae3e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6380025050148359204
-    second: baseTiles_0
+      213: 1248555608038528790
+    second: FogTiles_0
   - first:
-      213: -2099743267157953579
-    second: baseTiles_1
+      213: -8803926369574025805
+    second: FogTiles_1
   - first:
-      213: -8892170505707843581
-    second: baseTiles_2
-  - first:
-      213: -7896967599066078883
-    second: baseTiles_3
-  - first:
-      213: 8953027852682324164
-    second: baseTiles_4
+      213: 5008575680420546340
+    second: FogTiles_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +112,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: baseTiles_0
+      name: FogTiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,14 +126,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd330db05099577a0800000000000000
-      internalID: -6380025050148359204
+      spriteID: 617557bd5b2c35110800000000000000
+      internalID: 1248555608038528790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baseTiles_1
+      name: FogTiles_1
       rect:
         serializedVersion: 2
         x: 64
@@ -153,17 +147,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d338899f963cd2e0800000000000000
-      internalID: -2099743267157953579
+      spriteID: 3b588d0bc9b22d580800000000000000
+      internalID: -8803926369574025805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: baseTiles_2
+      name: FogTiles_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 127
         y: 0
         width: 32
         height: 32
@@ -174,50 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 300141da90aa89480800000000000000
-      internalID: -8892170505707843581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: baseTiles_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d51a5eefec5586290800000000000000
-      internalID: -7896967599066078883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: baseTiles_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c8ee47956b8f3c70800000000000000
-      internalID: 8953027852682324164
+      spriteID: 42780267b09028540800000000000000
+      internalID: 5008575680420546340
       vertices: []
       indices: 
       edges: []
