@@ -91,4 +91,78 @@ public class ViewController : MonoBehaviour {
             }
         }
     }
+
+    /// <summary>
+    /// 根据 Field 坐标成块生成矩形迷雾。
+    /// 根据 fieldWidth fieldHeight 字段确定 Field 大小。
+    /// 具有覆盖特性。
+    /// </summary>
+    /// <param name="newField">新的迷雾块坐标。</param>
+    void GenerateFog(Vector2 newField) {
+        int newX = (int)newField.x * fieldWidth - fieldWidth / 2;
+        int newY = (int)newField.y * fieldHeight - fieldHeight / 2;
+
+        GenerateFog(new Vector2(newX, newY), fieldWidth, fieldHeight);
+    }
+
+    /// <summary>
+    /// 根据当前地图坐标与期待的迷雾生成方向生成迷雾 Field。
+    /// </summary>
+    /// <param name="position"></param>
+    /// <param name="direction"></param>
+    void GenerateFog(Vector2 position, DirectionEnum direction) {
+        // 计算 position 所在的 Field 坐标。
+        int newX = ((int)position.x - fieldWidth / 2) / fieldWidth + 1;
+        int newY = ((int)position.y - fieldHeight / 2) / fieldHeight + 1;
+
+        switch (direction) {
+            case DirectionEnum.Up:
+                newY++;
+                break;
+            case DirectionEnum.Right:
+                newX++;
+                break;
+            case DirectionEnum.Left:
+                newX--;
+                break;
+            case DirectionEnum.Down:
+            default:
+                newY--;
+                break;
+        }
+
+        GenerateFog(new Vector2(newX, newY));
+    }
+
+    /// <summary>
+    /// 照亮一块 Tile。
+    /// </summary>
+    /// <param name="vec"></param>
+    void LightUp(Vector2 vec) {
+        this.fogMap.SetTile(new Vector3Int((int)vec.x, (int)vec.y, 0), null);
+    }
+
+
+    /// <summary>
+    /// 照亮坐标视野范围外的一片 Tile。
+    /// </summary>
+    /// <param name="vec"></param>
+    /// <param name="sight"></param>
+    void LightUp(Vector2 vec, int sight) {
+        LightUp(vec);
+
+        for (int i = (int)vec.x - sight; i <= vec.x; i++) {
+            for (int j = (int)vec.y - sight; j < vec.y; j++) {
+                int disX = (int)vec.x - i;
+                int disY = (int)vec.y - j;
+
+                if (Vector2.Distance(new Vector2(i, j), vec) < sight) {
+                    this.LightUp(new Vector2(i, j));
+                    this.LightUp(new Vector2(i + 2 * disX, j + 2 * disY));
+                    this.LightUp(new Vector2(i + disX + disY, j + disY - disX));
+                    this.LightUp(new Vector2(i + disX - disY, j + disX + disY));
+                }
+            }
+        }
+    }
 }
