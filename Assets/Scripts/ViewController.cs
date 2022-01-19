@@ -52,6 +52,8 @@ public class ViewController : MonoBehaviour {
 
         LightUp(new Vector2(0, 0), this.sight);
         //LightUp(new Vector2(1, 5));
+
+        LightUp(new Vector2(0, 0), DirectionEnum.Down, 2);
     }
 
     int tempi = -3;
@@ -165,5 +167,30 @@ public class ViewController : MonoBehaviour {
                 }
             }
         }
+    }
+
+    void LightUp(Vector2 vec, DirectionEnum direction, int step) {
+        Vector2 increase;
+        switch (direction) {
+            case DirectionEnum.Up:
+                increase = new Vector2(0, 1);
+                break;
+            case DirectionEnum.Right:
+                increase = new Vector2(1, 0);
+                break;
+            case DirectionEnum.Left:
+                increase = new Vector2(-1, 0);
+                break;
+            case DirectionEnum.Down:
+            default:
+                increase = new Vector2(0, -1);
+                break;
+        }
+
+        for (int i = 0; i < step; i++) {
+            vec += increase;
+            LightUp(vec, this.sight);
+        }
+
     }
 }
