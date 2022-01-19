@@ -3,7 +3,10 @@ guid: d3b12dbc69e1aab449e6613fe9c91754
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - undergroundMap: {instanceID: 0}
+  - fogMap: {instanceID: 0}
+  - fogTile: {fileID: 11400000, guid: f8497d4902bab24468df9282a093fbd7, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
