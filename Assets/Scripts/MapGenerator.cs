@@ -87,7 +87,7 @@ public class MapGenerator : MonoBehaviour {
         this.kaTileProbability = 70F;
         this.waterTileProbability = 70F;
 
-        Test();
+        //Test();
     }
 
     /// <summary>
