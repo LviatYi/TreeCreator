@@ -156,6 +156,7 @@ public class ViewController : MonoBehaviour {
                 int disX = (int)vec.x - i;
                 int disY = (int)vec.y - j;
 
+                //四分算法 效率提升
                 if (Vector2.Distance(new Vector2(i, j), vec) < sight) {
                     this.LightUp(new Vector2(i, j));
                     this.LightUp(new Vector2(i + 2 * disX, j + 2 * disY));
