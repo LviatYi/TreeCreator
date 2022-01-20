@@ -1,4 +1,4 @@
-public enum UndergroundTileEnum {
+public enum UndergroundTileType {
     Dirt = 0,
     N = 1,
     P = 2,
