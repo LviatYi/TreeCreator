@@ -2,6 +2,10 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+/// <summary>
+/// View 控制类。
+/// </summary>
+/// <author>LviatYi</author>
 public class ViewController : MonoBehaviour {
     [Header("Player attr")]
     [SerializeField]
@@ -54,26 +58,6 @@ public class ViewController : MonoBehaviour {
         //LightUp(new Vector2(1, 5));
 
         LightUp(new Vector2(0, 0), DirectionEnum.Down, 2);
-    }
-
-    void Update() {
-
-    }
-
-    void UpdateView(Vector2 position, int sight) {
-        for (int i = (int)position.x - sight; (int)i < position.x + sight; i++) {
-            for (int j = (int)position.y - sight; (int)j < position.y + sight; j++) {
-                UpdateTileView(new Vector2(i, j));
-            }
-        }
-    }
-
-    /// <summary>
-    /// 更新指定 Tile 的 Fog 或 
-    /// </summary>
-    /// <param name="vec">指定 Tile 的坐标。</param>
-    void UpdateTileView(Vector2 vec) {
-
     }
 
     /// <summary>
