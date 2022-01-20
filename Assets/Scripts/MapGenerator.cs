@@ -33,7 +33,6 @@ public class MapGenerator : MonoBehaviour {
     [SerializeField]
     private float waterSeed;
 
-
     private float nTileProbability;
     private float pTileProbability;
     private float kaTileProbability;
