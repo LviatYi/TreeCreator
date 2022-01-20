@@ -1,5 +1,5 @@
 /// <summary>
-/// Underground Tile 可能存在的所有类型。
+/// Underground Tile 枚举类。
 /// </summary>
 /// <author>LviatYi</author>
 public enum UndergroundTileType {

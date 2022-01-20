@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 
 /// <summary>
 /// 方向 枚举类。
 /// </summary>
+/// <author>LviatYi</author>
 [Flags]
 public enum DirectionEnum : sbyte {
     /// <summary>
