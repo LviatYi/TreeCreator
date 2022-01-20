@@ -1,35 +1,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Tile 信息类。
+/// </summary>
+/// <author>LviatYi</author>
 public class TileInfo {
+    private Vector3 coordinate;
+    private string name;
+    private string description;
+    private UndergroundTileType type;
+    private List<Vector3Int> bloodSameCoordinate;
+
     /// <summary>
     /// 坐标。
     /// </summary>
-    private Vector3 coordinate;
+    public Vector3 Coordinate { get => coordinate; set => coordinate = value; }
 
     /// <summary>
     /// Tile 名称。
     /// </summary>
-    private string name;
+    public string Name { get => name; set => name = value; }
 
     /// <summary>
     /// 描述。
     /// </summary>
-    private string description;
+    public string Description { get => description; set => description = value; }
 
     /// <summary>
     /// 类型。
     /// </summary>
-    private UndergroundTileType type;
+    public UndergroundTileType Type { get => type; set => type = value; }
 
     /// <summary>
     /// 同类 Tile 块坐标。
     /// </summary>
-    private List<Vector3Int> bloodSameCoordinate;
-
-    public Vector3 Coordinate { get => coordinate; set => coordinate = value; }
-    public string Name { get => name; set => name = value; }
-    public string Description { get => description; set => description = value; }
-    public UndergroundTileType Type { get => type; set => type = value; }
     public List<Vector3Int> BloodSameCoordinate { get => bloodSameCoordinate; set => bloodSameCoordinate = value; }
 }
