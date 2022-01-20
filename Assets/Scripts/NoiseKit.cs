@@ -1,10 +1,10 @@
-﻿namespace Kit {
+namespace Kit {
     /// <summary>
     /// Noise 工具包。
     /// 包含一些 Noise 函数。
     /// 依赖于 UnityEngine.Mathf。
-    /// 若有其他需求请向 LviatYi 反馈。
     /// </summary>
+    /// <author>LviatYi</author>
     public static class NoiseKit {
         /// <summary>
         /// 生成 Perlin Noise。
