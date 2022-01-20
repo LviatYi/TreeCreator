@@ -56,9 +56,6 @@ public class ViewController : MonoBehaviour {
         LightUp(new Vector2(0, 0), DirectionEnum.Down, 2);
     }
 
-    int tempi = -3;
-    int tempj = 1;
-
     void Update() {
 
     }
@@ -110,8 +107,8 @@ public class ViewController : MonoBehaviour {
     /// <summary>
     /// 根据当前地图坐标与期待的迷雾生成方向生成迷雾 Field。
     /// </summary>
-    /// <param name="position"></param>
-    /// <param name="direction"></param>
+    /// <param name="position">地图坐标</param>
+    /// <param name="direction">方向</param>
     void GenerateFog(Vector2 position, DirectionEnum direction) {
         // 计算 position 所在的 Field 坐标。
         int newX = ((int)position.x - fieldWidth / 2) / fieldWidth + 1;
@@ -169,6 +166,12 @@ public class ViewController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// 沿某个方向照亮指定步数视野范围内的一片 Tile。
+    /// </summary>
+    /// <param name="vec"></param>
+    /// <param name="direction"></param>
+    /// <param name="step"></param>
     void LightUp(Vector2 vec, DirectionEnum direction, int step) {
         Vector2 increase;
         switch (direction) {
@@ -191,6 +194,5 @@ public class ViewController : MonoBehaviour {
             vec += increase;
             LightUp(vec, this.sight);
         }
-
     }
 }
