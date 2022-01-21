@@ -10,7 +10,7 @@ public class TileInfo {
     private string name;
     private string description;
     private UndergroundTileType type;
-    private List<Vector3Int> bloodSameCoordinate;
+    private List<Vector3Int> floodSameCoordinate;
 
     /// <summary>
     /// 坐标。
@@ -35,5 +35,5 @@ public class TileInfo {
     /// <summary>
     /// 同类 Tile 块坐标。
     /// </summary>
-    public List<Vector3Int> BloodSameCoordinate { get => bloodSameCoordinate; set => bloodSameCoordinate = value; }
+    public List<Vector3Int> FloodSameCoordinate { get => floodSameCoordinate; set => floodSameCoordinate = value; }
 }
