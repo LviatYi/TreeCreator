@@ -1,4 +1,4 @@
-﻿using Kit;
+using Kit;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
