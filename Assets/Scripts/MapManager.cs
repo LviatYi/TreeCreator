@@ -53,16 +53,16 @@ public class MapManager : MonoBehaviour {
         if (tile != null) {
             switch (tile.name) {
                 case "DirtTile":
-                    result = new TileInfo() { Name = "DirtTile", Coordinate = vec, Description = "泥土...", Type = UndergroundTileType.Dirt, BloodSameCoordinate = BloodCompare(vec) };
+                    result = new TileInfo() { Name = "DirtTile", Coordinate = vec, Description = "泥土...", Type = UndergroundTileType.Dirt, FloodSameCoordinate = FloodCompare(vec) };
                     break;
                 case "NTile":
-                    result = new TileInfo() { Name = "NTile", Coordinate = vec, Description = "石...", Type = UndergroundTileType.N, BloodSameCoordinate = BloodCompare(vec) };
+                    result = new TileInfo() { Name = "NTile", Coordinate = vec, Description = "石...", Type = UndergroundTileType.N, FloodSameCoordinate = FloodCompare(vec) };
                     break;
                 case "PTile":
-                    result = new TileInfo() { Name = "PTile", Coordinate = vec, Description = "粦...", Type = UndergroundTileType.P, BloodSameCoordinate = BloodCompare(vec) };
+                    result = new TileInfo() { Name = "PTile", Coordinate = vec, Description = "粦...", Type = UndergroundTileType.P, FloodSameCoordinate = FloodCompare(vec) };
                     break;
                 case "KaTile":
-                    result = new TileInfo() { Name = "KaTile", Coordinate = vec, Description = "甲...", Type = UndergroundTileType.Ka, BloodSameCoordinate = BloodCompare(vec) };
+                    result = new TileInfo() { Name = "KaTile", Coordinate = vec, Description = "甲...", Type = UndergroundTileType.Ka, FloodSameCoordinate = FloodCompare(vec) };
                     break;
                 default:
                     break;
@@ -78,7 +78,7 @@ public class MapManager : MonoBehaviour {
     /// </summary>
     /// <param name="vec">起始坐标。</param>
     /// <returns>返回同类型的 Tile 坐标集合。</returns>
-    private List<Vector3Int> BloodCompare(Vector3Int vec) {
+    private List<Vector3Int> FloodCompare(Vector3Int vec) {
         List<Vector3Int> result = new List<Vector3Int>();
         Stack<Vector3Int> compareStack = new Stack<Vector3Int>();
         List<Vector3Int> visited = new List<Vector3Int>();
